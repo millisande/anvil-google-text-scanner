@@ -42,6 +42,25 @@ This will open the virtual environment that we've saved all the packages to so t
 
 If you wish to use the IBM classifier service to classify some text and present it in the anvil website you will need to set up a classifier and then add the credentials to access it to this application.
 
+
+You will need to sign up for [IBM cloud](cloud.ibm.com).
+
+Then you will need to go the catalog and search for `Natural Language Classifier` and set up a service. 
+
+Open a file in your code editor of choice, paste this in:
+
+```
+NLC_api_key=WHATEVER-YOUR-NLC-API-KEY-IS
+NLC_model_id=WHATEVER-YOUR-MODEL-ID-IS
+NLC_url=WHATEVER-YOUR-CLASSIFIER-SERVICE-END-POINT-IS
+```
+
+Replace the capitalised words on the right hand side of the equals sign on both rows with the actual values of your api key and your model id. You can find your api key on the IBM Cloud page for your NLC and NLU service respectively, the page with the "Launch Tool" button for NLC. You can find your model id on the Overview page when you click to test your model in the GUI.
+
+Your url will be different depending on where you decided to host your Natural Language Classifier and Natural Language Understanding services. You can see the list of which url to use for which region(for NLC here)[https://cloud.ibm.com/apidocs/natural-language-classifier#service-endpoint].
+
+Save the file as `.env`
+
 ### Get a Google OCR text scanner service and add the credentials to the application
 
 Actually the file that is called `Testing-Google-Vision-API.py` doesn't actually connect to Anvil. It does however connect to Google and is an example of how you would do this API call in python code.
@@ -74,4 +93,22 @@ In order for anvil to be able to call the APIs you will need to have your local 
 
 If you are doing the natural language classifier version (this is set up to use Anvil whereas the other code is not) you need only to use the command `python Testing-Anvil-Classifier.py`. You can then open the Anvil app in your browser.
 
-If you are doing the Google API calls. 
+If you are doing the Google API calls then you will need to first run in the command line:
+
+If you are on a Mac then run:
+
+```
+export GOOGLE_APPLICATION_CREDENTIALS="service-key.json"
+```
+
+If you are on a Windows machine then run:
+
+```
+set GOOGLE_APPLICATION_CREDENTIALS=service-key.json
+```
+
+Then you can run `python Testing-Google-Vision-API.py` to run the google vision recognition.
+
+## Outstanding work
+
+The Testing-Google-Vision-API could be made callable by anvil.
