@@ -11,7 +11,11 @@ If you pay for Anvil's higher tiers you could run all these API calls from the p
 
 ## How to create an anvil app
 
-You will need to sign up for anvil. hhhhhhh
+First you would need to download the app file (named App ) 
+Then youb will need to go to "My Apps " on the "Anvil" website and click on the "import from file " button (just below the "create app" button) and select the app file.
+You should eventually see the app in "Anvil" 
+
+!["Import .yaml file "](/readme-images/import-app-sc.png "Import .yaml file")
 
 ## How to run the local part of the app
 
