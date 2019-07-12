@@ -11,11 +11,25 @@ If you pay for Anvil's higher tiers you could run all these API calls from the p
 
 ## How to create an anvil app
 
-First you would need to download the app file (named App ) 
-Then you will need to go to "My Apps " on the "Anvil" website and click on the "import from file " button (just below the "create app" button) and select the app file.
-You should eventually see the app in "Anvil" 
+Open [Anvil](https://anvil.works/) and go to the Build section of the website.
+
+Then you will need to go to "My Apps" tab on the "Anvil" website and click on the "import from file" button (just below the "create app" button) and select the app file.
+
+You should eventually see the app in "Anvil"
 
 !["Import .yaml file "](/readme-images/import-app-sc.png "Import .yaml file")
+
+On the right hand side you will see all the available pages. Above this list there is a cog wheel. Click the cog wheel and choose the Uplink key option.
+
+Create a server uplink key.
+
+Put the uplink key into line 21 so it reads:
+
+```
+anvil.server.connect('Your-uplink-key')
+```
+
+!["Get Uplink Key"](/readme-images/get-uplink-key.png "Get Uplink Key")
 
 ## How to run the local part of the app
 
@@ -49,7 +63,7 @@ If you wish to use the IBM classifier service to classify some text and present 
 
 You will need to sign up for [IBM cloud](cloud.ibm.com).
 
-Then you will need to go the catalog and search for `Natural Language Classifier` and set up a service. 
+Then you will need to go the catalog and search for `Natural Language Classifier` and set up a service.
 
 Open a file in your code editor of choice, paste this in:
 

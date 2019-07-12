@@ -17,7 +17,10 @@ natural_language_classifier = NaturalLanguageClassifierV1(
 def say_hello(name):
   print("Hello from the uplink, %s!" % name)
 
+#this is my link you will need to update this value
 anvil.server.connect('TKYP6FVKXCEZ5TEQ4K2ZE4TG-HVLZQDQTDXVZNU4A')
+
+
 
 @anvil.server.callable
 def add_text():
